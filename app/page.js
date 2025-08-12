@@ -102,8 +102,7 @@ export default function Home() {
             <CardContent>
               <p className='text-slate-200 leading-relaxed text-lg'>
                 I&#39;m a passionate frontend developer with a strong foundation in
-                modern web technologies. I enjoy creating clean, interactive,
-                experience. Currently I am working as an intern in Budapestand
+                modern web technologies. I enjoy creating clean, interactive and
                 user-friendly interfaces that deliver a great user experience.
               </p>
               <p className='text-slate-200 leading-relaxed text-lg'>
