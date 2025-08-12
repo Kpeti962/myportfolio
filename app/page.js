@@ -215,13 +215,7 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className='bg-gradient-to-tr from-indigo-950 via-slate-900 to-black border-t mt-16'>
-        <div className='max-w-4xl mx-auto px-6 py-8 text-center'>
-          <p className='text-slate-500 text-sm font-light'>
-            © 2024 John Doe. All rights reserved.
-          </p>
-        </div>
-      </footer>
+      
     </div>
   );
 }
