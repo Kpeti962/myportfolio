@@ -26,7 +26,7 @@ export default function Home() {
       name: 'Vinyl App',
       url: 'https://vinyl-app-liard.vercel.app/',
       description:
-        'In that webpage I used Next.js, Tailwind CSS and Supabase. You can search vinyl albums, add them to your collection, and manage your vinyl library.',
+        'In that webpage I used Next.js, Tailwind CSS, Supabase and Rest API. You can search vinyl albums, add them to your collection, and manage your vinyl library.',
     },
   ];
 
