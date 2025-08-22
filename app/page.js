@@ -25,6 +25,7 @@ export default function Home() {
     {
       name: 'Vinyl App',
       url: 'https://vinyl-app-liard.vercel.app/',
+      github: 'https://github.com/Kpeti962/vinyl-app',
       description:
         'In that webpage I used Next.js, Tailwind CSS, Supabase and Rest API. You can search vinyl albums, add them to your collection, and manage your vinyl library.',
     },
@@ -89,6 +90,8 @@ export default function Home() {
               <br />
               Always learning, always creating.
             </p>
+
+
           </div>
         </div>
       </header>
@@ -137,22 +140,48 @@ export default function Home() {
             <CardContent>
               <div className='grid gap-6 md:grid-cols-1 lg:grid-cols-1'>
                 {references.map((ref, index) => (
-                  <a
+                  <div
                     key={index}
-                    href={ref.url}
-                    target='_blank'
-                    rel='noopener noreferrer'
-                    className='block p-5 border rounded-xl bg-gradient-to-br from-slate-900 to-indigo-950 shadow-lg hover:shadow-xl transition hover:-translate-y-1 hover:border-indigo-400'
+                    className='p-5 border rounded-xl bg-gradient-to-br from-slate-900 to-indigo-950 shadow-lg hover:shadow-xl transition hover:-translate-y-1 hover:border-indigo-400'
                   >
                     <h3 className='font-bold text-indigo-300 mb-1 flex items-center gap-2'>
                       <ExternalLink className='w-4 h-4' />
                       {ref.name}
                     </h3>
-                    <p className='text-sm text-slate-400'>{ref.description}</p>
-                  </a>
+                    <p className='text-sm text-slate-400 mb-4'>{ref.description}</p>
+                    <div className='flex gap-2 mt-2'>
+                      {/* Élő oldal gomb */}
+                      <a
+                        href={ref.url}
+                        target='_blank'
+                        rel='noopener noreferrer'
+                      >
+                        <Button className= "cursor-pointer">
+                          Live page
+                          <ExternalLink className='w-3 h-3' />
+                        </Button>
+                      </a>
+                      {/* GitHub repo gomb */}
+                      {ref.github && (
+                        <a
+                          href={ref.github}
+                          target='_blank'
+                          rel='noopener noreferrer'
+                        >
+                          <Button>
+                            <Github className='w-4 h-4' />
+                            GitHub Repo
+                            <ExternalLink className='w-3 h-3' />
+                          </Button>
+                        </a>
+                      )}
+                    </div>
+                  </div>
                 ))}
               </div>
             </CardContent>
+
+
           </Card>
         </section>
 
@@ -214,7 +243,7 @@ export default function Home() {
         </section>
       </main>
 
-      
+
     </div>
   );
 }
