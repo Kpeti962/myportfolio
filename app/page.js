@@ -161,6 +161,9 @@ export default function Home() {
               <CardTitle>Reference page</CardTitle>
             </CardHeader>
             <CardContent>
+              <div>
+                      <h2 className='font-bold text-indigo-300 my-4 flex justify-center text-center px-4'>Hobby page</h2>
+                    </div>
               <div className='grid gap-6 md:grid-cols-1 lg:grid-cols-1'>
                 {references.map((ref, index) => (
                   <div
@@ -205,7 +208,7 @@ export default function Home() {
               </div>
             </CardContent>
                     <div>
-                      <h2 className='font-bold text-indigo-300 mt-4 flex justify-center text-center px-4'>I worked on the following sites at my internship, where I used PHP Laravel Blade and Vue frameworks.</h2>
+                      <h2 className='font-bold text-indigo-300 mt-4 flex justify-center text-center px-4'>I worked on the following sites at my internship, where I used PHP Laravel Blade, Next.js and Vue.js frameworks.</h2>
                     </div>
             <CardContent>
               <div className='grid gap-6 md:grid-cols-1 lg:grid-cols-1'>
