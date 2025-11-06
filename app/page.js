@@ -18,7 +18,7 @@ export default function Home() {
     'JavaScript',
     'React JS',
     'Next JS',
-    'PHP',
+    'PHP Laravel',
   ];
 
   const references = [
@@ -28,6 +28,29 @@ export default function Home() {
       github: 'https://github.com/Kpeti962/vinyl-app',
       description:
         'In that webpage I used Next.js, Tailwind CSS, Supabase and Rest API. You can search vinyl albums, add them to your collection, and manage your vinyl library.',
+    },
+  ];
+  const referencesInternship = [
+    {
+      name: 'Poweredbyvizi',
+      url: 'https://poweredbyvizi.ch/',
+      github: '',
+      description:
+        'For this site we worked in PHP Laravel Blade.',
+    },
+    {
+      name: 'Media Sales Hungary',
+      url: 'https://mediasales.hu/',
+      github: '',
+      description:
+        'For this site we worked in Next.js',
+    },
+    {
+      name: '4iG Space & Defence Technology',
+      url: 'https://4igsdt.hu/',
+      github: '',
+      description:
+        'For this site we worked in PHP Laravel Blade and Vue.js.',
     },
   ];
 
@@ -156,7 +179,7 @@ export default function Home() {
                         target='_blank'
                         rel='noopener noreferrer'
                       >
-                        <Button className= "cursor-pointer">
+                        <Button className="cursor-pointer">
                           Live page
                           <ExternalLink className='w-3 h-3' />
                         </Button>
@@ -177,6 +200,54 @@ export default function Home() {
                       )}
                     </div>
                   </div>
+
+                ))}
+              </div>
+            </CardContent>
+                    <div>
+                      <h2 className='font-bold text-indigo-300 mt-4 flex justify-center text-center px-4'>I worked on the following sites at my internship, where I used PHP Laravel Blade and Vue frameworks.</h2>
+                    </div>
+            <CardContent>
+              <div className='grid gap-6 md:grid-cols-1 lg:grid-cols-1'>
+                {referencesInternship.map((ref, index) => (
+                  <div
+                    key={index}
+                    className='p-5 border rounded-xl bg-gradient-to-br from-slate-900 to-indigo-950 shadow-lg hover:shadow-xl transition hover:-translate-y-1 hover:border-indigo-400'
+                  >
+                    <h3 className='font-bold text-indigo-300 mb-1 flex items-center gap-2'>
+                      <ExternalLink className='w-4 h-4' />
+                      {ref.name}
+                    </h3>
+                    <p className='text-sm text-slate-400 mb-4'>{ref.description}</p>
+                    <div className='flex gap-2 mt-2'>
+                      {/* Élő oldal gomb */}
+                      <a
+                        href={ref.url}
+                        target='_blank'
+                        rel='noopener noreferrer'
+                      >
+                        <Button className="cursor-pointer">
+                          Live page
+                          <ExternalLink className='w-3 h-3' />
+                        </Button>
+                      </a>
+                      {/* GitHub repo gomb */}
+                      {ref.github && (
+                        <a
+                          href={ref.github}
+                          target='_blank'
+                          rel='noopener noreferrer'
+                        >
+                          <Button>
+                            <Github className='w-4 h-4' />
+                            GitHub Repo
+                            <ExternalLink className='w-3 h-3' />
+                          </Button>
+                        </a>
+                      )}
+                    </div>
+                  </div>
+
                 ))}
               </div>
             </CardContent>
